@@ -214,7 +214,8 @@ class Oauth_lib
     	print_r($user);
     	echo HtmlSpecialChars($this->oauth_client->error);
     	//$this->load->model('oauth_model');
-    	//$this->ci->oauth_model->createUser($data);
+    	//$this->oauth_model->createUser($data);
+		//添加自己的业务逻辑，根据ID查询用户是否已存在，没存在的话，新建一个账号，然后置为已登录状态
     }
 
 }
