@@ -19,7 +19,7 @@ class Oauth_lib
     	$this->ci->load->config('oauth');
     	$this->sitesConfig = $this->ci->config->item('sites_enabled');
     	
-    	ll('oauth_client');
+    	$this->ci->load->library('oauth_client');
     	$this->oauth_client = $this->ci->oauth_client;
     }
     
