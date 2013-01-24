@@ -16,10 +16,11 @@ class Oauth_lib
     function __construct()
     {
     	$this->ci =& get_instance();
-    	$this->ci->load->config('oauth');
+    	$this->ci->load->helper('bcore');
+		$this->ci->load->config('oauth');
     	$this->sitesConfig = $this->ci->config->item('sites_enabled');
     	
-    	$this->ci->load->library('oauth_client');
+    	ll('oauth_client');
     	$this->oauth_client = $this->ci->oauth_client;
     }
     
@@ -214,8 +215,7 @@ class Oauth_lib
     	print_r($user);
     	echo HtmlSpecialChars($this->oauth_client->error);
     	//$this->load->model('oauth_model');
-    	//$this->oauth_model->createUser($data);
-		//添加自己的业务逻辑，根据ID查询用户是否已存在，没存在的话，新建一个账号，然后置为已登录状态
+    	//$this->ci->oauth_model->createUser($data);
     }
 
 }

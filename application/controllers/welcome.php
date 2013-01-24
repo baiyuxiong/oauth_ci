@@ -10,7 +10,8 @@ class Welcome extends CI_Controller
 
 	function index()
 	{
-		$this->load->view('lib\oauth\loginicon.php');
+		//$this->load->view('lib\oauth\loginicon.php');
+		$this->oauth_lib->loadLoginIcons();
 	}
 }
 

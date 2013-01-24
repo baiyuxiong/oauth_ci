@@ -16,7 +16,6 @@ function lv($view, $vars = array(), $return = FALSE)
 	}
 }
 
-
 function g($key,$clean = false)
 {
 	$CI =& get_instance();
@@ -29,25 +28,6 @@ function p($key,$clean = false)
 	return $CI->input->post($key,$clean);
 }
 
-function lav($view, $vars = array(), $return = FALSE)
-{
-    $CI =& get_instance();
-    ll('adminview');
-    $CI->adminview->header($view);
-    $CI->adminview->breadcrumb();
-    lv($view, $vars, $return);
-    $CI->adminview->sidebar();
-    $CI->adminview->footer($view);
-}
-
-function lfv($view, $vars = array(), $return = FALSE)
-{
-    $CI =& get_instance();
-    ll('frontview');
-    $CI->frontview->header($view);
-    lv($view, $vars, $return);
-    $CI->frontview->footer($view);
-}
 
 /**
  * 载入模型文件的缩略写法
@@ -68,5 +48,5 @@ function ll($library = '', $params = NULL, $object_name = NULL)
 	
 	$CI->load->library($library, $params, $object_name);
 }
-}
+
 ?>
