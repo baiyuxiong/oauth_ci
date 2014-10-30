@@ -1,6 +1,7 @@
 <?php
 /**
  * 载入视图的缩略写法
+ * Load view shortly
  */
 function lv($view, $vars = array(), $return = FALSE)
 {
@@ -31,6 +32,7 @@ function p($key,$clean = false)
 
 /**
  * 载入模型文件的缩略写法
+ * Load Model shortly
  */
 function lm($model, $name = '', $db_conn = FALSE)
 {
@@ -41,6 +43,7 @@ function lm($model, $name = '', $db_conn = FALSE)
 
 /**
  * 载入类库文件的缩略写法。
+ * Load library shortly
  */
 function ll($library = '', $params = NULL, $object_name = NULL)
 {
